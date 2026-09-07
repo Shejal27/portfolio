@@ -1,86 +1,417 @@
-/* styles.css */
+/* =========================================================
+   RESET
+   ========================================================= */
+
 * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-  }
-  
-  body {
+}
+
+
+/* =========================================================
+   BODY
+   ========================================================= */
+
+body {
     font-family: Arial, sans-serif;
     line-height: 1.6;
-    background-color: aqua;
-  }
-  
-  header {
+    background-color: #f5f7fa;
+    color: #333;
+}
+
+
+/* =========================================================
+   HEADER / NAVBAR
+   ========================================================= */
+
+header {
     background: #333;
-    padding: 10px;
+    padding: 15px 20px;
     color: white;
-    
-  }
-  
-  header nav ul {
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+}
+
+header nav {
+    max-width: 1100px;
+    margin: auto;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.logo {
+    font-size: 22px;
+    font-weight: bold;
+}
+
+header nav ul {
     list-style: none;
     text-align: center;
-  }
-  
-  header nav ul li {
-    display: inline;
-   margin: 0 15px;
-  }
-  
-  header nav ul li a {
+}
+
+header nav ul li {
+    display: inline-block;
+    margin: 0 10px;
+}
+
+header nav ul li a {
     color: white;
     text-decoration: none;
-  }
-  
-  .hero {
+    font-weight: 500;
+    transition: 0.3s;
+}
+
+header nav ul li a:hover {
+    color: #4CAF50;
+}
+
+
+/* =========================================================
+   COMMON SECTION
+   ========================================================= */
+
+section {
+    padding: 60px 20px;
+}
+
+section h2 {
+    text-align: center;
+    font-size: 32px;
+    margin-bottom: 30px;
+    color: #333;
+}
+
+
+/* =========================================================
+   HERO
+   ========================================================= */
+
+.hero {
     background: #4CAF50;
     color: white;
-    padding: 50px 20px;
+    padding: 90px 20px;
     text-align: center;
-  }
-  
-  .hero h1 {
-    font-size: 3em;
-  }
-  
-  
-  
-  section {
-    padding: 50px 20px;
-  }
+}
 
-  
-  .about, .projects, .contact {
+.hero h1 {
+    font-size: 42px;
+    margin-bottom: 20px;
+}
+
+.hero h2 {
+    color: white;
+    margin-bottom: 15px;
+}
+
+.hero h2 span {
+    color: #fff;
+}
+
+.hero p {
+    font-size: 18px;
+    margin: 8px 0;
+}
+
+.hero-buttons {
+    margin-top: 30px;
+}
+
+.hero-buttons a {
+    display: inline-block;
+    text-decoration: none;
+    color: white;
+    border: 2px solid white;
+    padding: 10px 20px;
+    margin: 5px;
+    border-radius: 5px;
+    transition: 0.3s;
+}
+
+.hero-buttons a:hover {
+    background: white;
+    color: #4CAF50;
+}
+
+
+/* =========================================================
+   ABOUT
+   ========================================================= */
+
+.about {
+    background: #fff;
+    text-align: center;
+}
+
+.about img {
+    display: block;
+    margin: 0 auto 25px;
+    border-radius: 50%;
+    object-fit: cover;
+}
+
+.about p {
+    max-width: 850px;
+    margin: 12px auto;
+}
+
+.about h3 {
+    margin-top: 25px;
+    margin-bottom: 10px;
+}
+
+
+/* =========================================================
+   SKILLS
+   ========================================================= */
+
+.skills {
     background: #f4f4f4;
-  }
-  
-  
-  footer {
+    text-align: center;
+}
+
+.skills ul {
+    list-style: none;
+    max-width: 900px;
+    margin: auto;
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 12px;
+}
+
+.skills ul li {
     background: #333;
     color: white;
+    padding: 10px 18px;
+    border-radius: 20px;
+}
+
+
+/* =========================================================
+   PROJECTS
+   ========================================================= */
+
+.projects {
+    background: #fff;
+}
+
+.project-card {
+    max-width: 900px;
+    margin: 20px auto;
+    padding: 25px;
+    background: #f4f4f4;
+    border-radius: 8px;
+    box-shadow: 0 3px 10px rgba(0, 0, 0, 0.10);
+}
+
+.project-card h3 {
+    margin-bottom: 12px;
+    color: #333;
+}
+
+.project-card p {
+    margin-bottom: 10px;
+}
+
+
+/* =========================================================
+   EXPERIENCE
+   ========================================================= */
+
+.experience {
+    background: #f4f4f4;
+}
+
+.experience-card {
+    max-width: 900px;
+    margin: 20px auto;
+    padding: 25px;
+    background: white;
+    border-left: 5px solid #4CAF50;
+    border-radius: 6px;
+    box-shadow: 0 3px 10px rgba(0, 0, 0, 0.10);
+}
+
+.experience-card h3 {
+    margin-bottom: 8px;
+}
+
+.experience-card p {
+    margin: 8px 0;
+}
+
+
+/* =========================================================
+   CONTACT
+   ========================================================= */
+
+.contact {
+    background: #fff;
+}
+
+.contact > p {
     text-align: center;
-    padding: 10px;
-  }
-  
-  form input, form textarea {
+    margin-bottom: 25px;
+}
+
+form {
+    max-width: 700px;
+    margin: auto;
+}
+
+form input,
+form textarea {
     width: 100%;
-    padding: 10px;
+    padding: 12px;
     margin: 10px 0;
     border: 1px solid #ccc;
-  }
-  
-  form button {
+    border-radius: 5px;
+    font-family: Arial, sans-serif;
+}
+
+form textarea {
+    min-height: 130px;
+    resize: vertical;
+}
+
+form button {
     background-color: #4CAF50;
     color: white;
-    padding: 10px 20px;
+    padding: 12px 25px;
     border: none;
+    border-radius: 5px;
     cursor: pointer;
-  }
+    font-size: 16px;
+}
 
-  footer{
-    background-color: aquamarine;
-  }
+form button:hover {
+    background-color: #388e3c;
+}
 
 
-  
+/* =========================================================
+   CONTACT INFORMATION
+   ========================================================= */
+
+.contact-info {
+    max-width: 700px;
+    margin: 30px auto 0;
+    text-align: center;
+}
+
+.contact-info p {
+    margin: 10px 0;
+}
+
+.contact-info a {
+    color: #4CAF50;
+    text-decoration: none;
+}
+
+.contact-info a:hover {
+    text-decoration: underline;
+}
+
+
+/* =========================================================
+   FOOTER
+   ========================================================= */
+
+footer {
+    background-color: #333;
+    color: white;
+    text-align: center;
+    padding: 15px;
+}
+
+
+/* =========================================================
+   MOBILE RESPONSIVE
+   ========================================================= */
+
+@media (max-width: 768px) {
+
+    header nav {
+        flex-direction: column;
+    }
+
+    .logo {
+        margin-bottom: 12px;
+    }
+
+    header nav ul li {
+        display: inline-block;
+        margin: 5px 7px;
+    }
+
+    header nav ul li a {
+        font-size: 14px;
+    }
+
+    .hero {
+        padding: 70px 15px;
+    }
+
+    .hero h1 {
+        font-size: 32px;
+    }
+
+    .hero h2 {
+        font-size: 24px;
+    }
+
+    .hero p {
+        font-size: 16px;
+    }
+
+    section {
+        padding: 45px 15px;
+    }
+
+    section h2 {
+        font-size: 28px;
+    }
+
+    .project-card,
+    .experience-card {
+        padding: 20px;
+    }
+
+    .skills ul li {
+        padding: 8px 14px;
+        font-size: 14px;
+    }
+}
+
+
+/* =========================================================
+   SMALL MOBILE
+   ========================================================= */
+
+@media (max-width: 480px) {
+
+    .hero h1 {
+        font-size: 27px;
+    }
+
+    .hero h2 {
+        font-size: 21px;
+    }
+
+    .hero-buttons a {
+        display: block;
+        margin: 10px auto;
+        max-width: 220px;
+    }
+
+    header nav ul li {
+        margin: 4px;
+    }
+
+    header nav ul li a {
+        font-size: 13px;
+    }
+}
